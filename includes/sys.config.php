@@ -32,16 +32,16 @@
 define('DB_DRIVER', 'mysql');
 
 /** Database name */
-define('DB_NAME', 'ggtqp5x3_cftp394');
+define('DB_NAME', 'wattletree');
 
 /** Database host (in most cases it's localhost) */
 define('DB_HOST', 'localhost');
 
 /** Database username (must be assigned to the database) */
-define('DB_USER', 'ggtqp5x3_cftp394');
+define('DB_USER', 'root');
 
 /** Database password */
-define('DB_PASSWORD', '79p!)1sYS1');
+define('DB_PASSWORD', 'root');
 
 /**
  * Prefix for the tables. Set to something other than tbl_ for increased

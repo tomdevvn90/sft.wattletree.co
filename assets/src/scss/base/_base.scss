@@ -33,7 +33,11 @@ body
 }
 
 body {
+    &.logged-in{
+        padding-top: 4.5rem;
     padding-top: 4.5rem;
+    }
+    padding-top: 55px;
 }
 
 .none {
@@ -72,6 +76,9 @@ a {
     }
 
     // Header
+    .branding_unlogged_wrap{
+        background: var(--main_color);
+    }
     .branding_unlogged {
         text-align:center;
         margin:20px auto;
@@ -95,6 +102,9 @@ a {
     }
 
     // Main white content boxes
+    .login-form-wrapper{
+        padding: 40px 0;
+    }
 
     .white-box {
         background-color:white;

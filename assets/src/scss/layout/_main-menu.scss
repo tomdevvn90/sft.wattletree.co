@@ -126,6 +126,10 @@
                 background:var(--side_menu_selected_parent_bg);
                 color:var(--side_menu_selected_parent_color);
             }
+
+            &::after{
+                color: var(--side_menu_selected_parent_color);
+            }
         }
     }
 
@@ -215,6 +219,7 @@
                         color:var(--side_menu_selected_parent_color);
                     }
                 }
+
             }
         }
 

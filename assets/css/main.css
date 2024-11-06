@@ -2,8 +2,8 @@
   --body_background: #f5f5f9;
   --top_bar_background: #0d0f14;
   --top_bar_hover: #232835;
-  --main_color: #4c2ab6;
-  --main_lighten: #633dd3;
+  --main_color: #295551;
+  --main_lighten: #B3A96F;
   --main_darken: #3f1f9c;
   --main_text: #666;
   --padding_top_main: 60px;
@@ -15,11 +15,11 @@
   --side_menu_sub_color: #3f3f47;
   --side_menu_sub_hover: #333339;
   --side_menu_separator_border: none;
-  --side_menu_selected_parent_bg: #e7e0ff;
-  --side_menu_selected_parent_color: #696cff;
+  --side_menu_selected_parent_bg: #295551;
+  --side_menu_selected_parent_color: #fff;
   --side_menu_selected_subitems_background: #f2f2f2;
-  --side_menu_current_subitem_bg: #f5f5f9;
-  --side_menu_current_subitem_bg_hover: #e4e4ff;
+  --side_menu_current_subitem_bg: #fff8ce;
+  --side_menu_current_subitem_bg_hover: #fff8ce;
   --side_menu_contracted_color: #222;
   --widget_title_color: #42454a;
   --widget_title_background: #fff;
@@ -282,6 +282,7 @@
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: white;
   background-color: var(--main_lighten) !important;
+  border-color: var(--main_lighten) !important;
 }
 
 .btn-pslight {
@@ -292,7 +293,12 @@
 }
 
 .btn {
+  margin: 0.125rem 0;
   white-space: normal;
+}
+.btn.active {
+  background-color: var(--main_color);
+  border-color: var(--main_color);
 }
 
 .btn-wide {
@@ -370,6 +376,7 @@ span.label {
 .plupload_button:hover {
   color: white;
   background: var(--main_lighten);
+  border-color: var(--main_lighten);
 }
 .plupload_button:focus, .plupload_button:active {
   color: white;
@@ -440,6 +447,10 @@ body {
 }
 
 body {
+  padding-top: 55px;
+}
+body.logged-in {
+  padding-top: 4.5rem;
   padding-top: 4.5rem;
 }
 
@@ -469,6 +480,9 @@ a:hover, a:focus, a:active {
 .backend .system_msg p {
   margin: 0;
 }
+.backend .branding_unlogged_wrap {
+  background: var(--main_color);
+}
 .backend .branding_unlogged {
   text-align: center;
   margin: 20px auto;
@@ -486,6 +500,9 @@ a:hover, a:focus, a:active {
   font-weight: bold;
   font-size: 11px;
   color: #0099CC;
+}
+.backend .login-form-wrapper {
+  padding: 40px 0;
 }
 .backend .white-box {
   background-color: white;
@@ -1024,12 +1041,21 @@ button.password_toggler > * {
   }
 }
 #header .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   height: 40px;
+  height: 40px;
+  width: auto;
   line-height: 10px;
   color: #f0f0f0;
 }
 #header .navbar-brand:hover, #header .navbar-brand:active, #header .navbar-brand:focus {
   text-decoration: none;
+}
+#header .navbar-brand img {
+  width: 20px;
+  height: auto;
 }
 #header .navbar-brand svg {
   fill: #777;
@@ -1160,6 +1186,9 @@ button.password_toggler > * {
 }
 .main_menu > li.current_page > a, .main_menu > li.current_nav > a {
   background: var(--side_menu_selected_parent_bg);
+  color: var(--side_menu_selected_parent_color);
+}
+.main_menu > li.current_page::after, .main_menu > li.current_nav::after {
   color: var(--side_menu_selected_parent_color);
 }
 
@@ -1432,7 +1461,7 @@ body.dashboard .widget_counters ul {
 }
 body.dashboard .widget_counters ul li {
   flex: 1;
-  background: red;
+  background: var(--main_color, red);
   color: white;
   padding: 20px;
   position: relative;
@@ -1443,21 +1472,6 @@ body.dashboard .widget_counters ul li {
     flex: 1 0 20%;
     margin-bottom: 20px;
   }
-}
-body.dashboard .widget_counters ul li:nth-child(1) {
-  background: #ffac02;
-}
-body.dashboard .widget_counters ul li:nth-child(2) {
-  background: #7ad14c;
-}
-body.dashboard .widget_counters ul li:nth-child(3) {
-  background: #6b6eff;
-}
-body.dashboard .widget_counters ul li:nth-child(4) {
-  background: #e74123;
-}
-body.dashboard .widget_counters ul li:nth-child(5) {
-  background: #03c3ec;
 }
 body.dashboard .widget_counters ul li h6 {
   font-weight: bold;
@@ -1497,7 +1511,7 @@ body.dashboard #widget_actions_log #log_container ul li:hover {
 }
 body.dashboard #widget_actions_log #log_container ul li i {
   margin: 0 1em;
-  color: #1ec4a7;
+  color: var(--main_lighten);
   text-align: center;
   font-size: 14px;
 }

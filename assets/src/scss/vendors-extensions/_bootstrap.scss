@@ -12,6 +12,7 @@
 	{
         color: white;
 		background-color:var(--main_lighten) !important;
+		border-color: var(--main_lighten) !important;
 	}
 }
 
@@ -24,7 +25,12 @@
 }
 
 .btn {
+	margin: 0.125rem 0;
 	white-space: normal;
+	&.active{
+		background-color:var(--main_color);
+		border-color: var(--main_color);
+	}
 }
 
 .btn-wide {

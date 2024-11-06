@@ -44,7 +44,7 @@ body.dashboard {
     
             li {
                 flex: 1;
-                background: red;
+                background: var(--main_color, red);
                 color: white;
                 padding: 20px;
                 position: relative;
@@ -55,11 +55,11 @@ body.dashboard {
                     margin-bottom: 20px;
                 }
     
-                &:nth-child(1) { background: #ffac02; }
-                &:nth-child(2) { background: #7ad14c; }
-                &:nth-child(3) { background: #6b6eff; }
-                &:nth-child(4) { background: #e74123; }
-                &:nth-child(5) { background: #03c3ec; }
+                // &:nth-child(1) { background: #ffac02; }
+                // &:nth-child(2) { background: #7ad14c; }
+                // &:nth-child(3) { background: #6b6eff; }
+                // &:nth-child(4) { background: #e74123; }
+                // &:nth-child(5) { background: #03c3ec; }
     
                 h6 {
                     font-weight: bold;
@@ -109,7 +109,7 @@ body.dashboard {
     
                     i {
                         margin:0 1em;
-                        color: #1ec4a7;
+                        color: var(--main_lighten);
                         text-align: center;
                         font-size: 14px;
                     }

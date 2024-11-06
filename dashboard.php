@@ -30,7 +30,7 @@ if (current_role_in([9])) {
         </div>
         <div class="row">
             <div class="col-sm-6">
-                <?php include_once WIDGETS_FOLDER . 'news.php'; ?>
+                <?php //include_once WIDGETS_FOLDER . 'news.php'; ?>
             </div>
             <?php
             if (current_role_in([9])) {

@@ -88,7 +88,7 @@ $flash_col = (isset($flash_size) && $flash_size == 'full') ? 'col-12' : 'col-12 
             <div class="main_content_unlogged">
                 <?php render_custom_assets('body_top'); ?>
 
-                    <div class="row">
+                    <div class="row branding_unlogged_wrap">
                         <div class="col-12 branding_unlogged">
                             <?php echo get_branding_layout(true); ?>
                         </div>

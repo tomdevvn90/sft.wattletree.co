@@ -124,7 +124,7 @@ if ($form == '2fa_verify') {
 
 include_once ADMIN_VIEWS_DIR . DS . 'header-unlogged.php';
 ?>
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center login-form-wrapper">
     <div class="col-12 col-sm-12 col-lg-4">
         <div class="white-box">
             <div class="white-box-interior">

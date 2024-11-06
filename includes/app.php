@@ -40,9 +40,9 @@ if ( !file_exists(CONFIG_FILE) ) {
  * on the footer blocks.
  *
  */
-define('SYSTEM_NAME','ProjectSend');
-define('SYSTEM_URI','https://www.projectsend.org/');
-define('SYSTEM_URI_LABEL','ProjectSend on github');
+define('SYSTEM_NAME','Wattletree');
+define('SYSTEM_URI','https://sft.wattletree.co/');
+define('SYSTEM_URI_LABEL','Wattletree');
 define('DONATIONS_URL','https://www.projectsend.org/donations/');
 define('PATREON_URL','https://www.patreon.com/ignacionelson');
 define('OPENCOLLECTIVE_URL', 'https://opencollective.com/projectsend');
@@ -245,7 +245,7 @@ define('JSON_CACHE_DIR', ROOT_DIR . DS . 'cache');
 define('ADMIN_UPLOADS_DIR', UPLOADED_FILES_ROOT . DS . 'admin');
 define('LOGO_MAX_WIDTH', 300);
 define('LOGO_MAX_HEIGHT', 300);
-define('DEFAULT_LOGO_FILENAME', 'projectsend-logo.svg');
+define('DEFAULT_LOGO_FILENAME', 'logo/Wattle-Logo1-Colour-Reverse@3x.png');
 
 /* Thumbnails */
 define('THUMBS_MAX_WIDTH', 300);

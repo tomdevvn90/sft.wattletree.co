@@ -9,10 +9,12 @@
         <?php } ?>
 
         <div class="navbar-header ms-3 me-auto">
-            <span class="navbar-brand">
+            <span class="navbar-brand site-logo">
                 <a href="<?php echo SYSTEM_URI; ?>" target="_blank">
-                    <?php include_once ROOT_DIR.'/assets/img/ps-icon.svg'; ?>
-                </a> <?php echo html_output(get_option('this_install_title')); ?></span>
+                    <?php $logo = BASE_URI.'/assets/img/logo/Wattle-Graphic-Reverse-Colour@3x.png'; ?>
+                    <img src="<?php echo $logo; ?>" alt="" width="20">
+                </a> <?php echo html_output(get_option('this_install_title')); ?>
+            </span>
         </div>
 
         <ul class="nav pull-right nav_account">
@@ -41,10 +43,10 @@
                         }
                     ?>
                     <?php if ( user_is_logged_in() && CURRENT_USER_LEVEL != 0) { ?>
-                        <li><hr class="dropdown-divider"></li>
+                        <!-- <li><hr class="dropdown-divider"></li>
                         <li>
-                            <a class="dropdown-item" href="<?php echo TRANSLATIONS_URL; ?>" target="_blank"><?php _e('Get more translations','cftp_admin'); ?></a>
-                        </li>
+                            <a class="dropdown-item" href="<?php //echo TRANSLATIONS_URL; ?>" target="_blank"><?php //_e('Get more translations','cftp_admin'); ?></a>
+                        </li> -->
                     <?php } ?>
                 </ul>
             </li>

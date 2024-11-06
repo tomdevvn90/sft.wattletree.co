@@ -72,14 +72,6 @@ if (isset($_GET['activate_template'])) {
                                     <div class="description">
                                         <?php echo $template['description']; ?>
                                     </div>
-
-                                    <h5><?php _e('Author', 'cftp_admin'); ?></h5>
-                                    <p>
-                                        <a href="<?php echo $template['authoruri']; ?>" target="_blank">
-                                            <?php echo $template['author']; ?>
-                                        </a><br>
-                                        <?php echo $template['authoremail']; ?>
-                                    </p>
                                 </div>
                             </div>
                             <div class="col-xs-4">

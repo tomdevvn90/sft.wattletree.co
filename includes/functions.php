@@ -793,16 +793,32 @@ function render_footer_text()
     ?>
     <footer>
         <div id="footer">
-            <?php
+        <?php
+            // Get the current date
+            $date = new DateTime();
+            // Extract day, month, and year
+            $day = $date->format('d');
+            $month = $date->format('m');
+            $year = $date->format('Y');
             if (is_projectsend_installed() && get_option('footer_custom_enable') == '1') {
                 echo strip_tags(get_option('footer_custom_content'), '<br><span><a><strong><em><b><i><u><s>');
             } else {
                 // $link = '<a href="'.SYSTEM_URI.'" target="_blank">'.SYSTEM_NAME.'</a>';
                 // echo sprintf(__('Provided by %s', 'cftp_admin'), $link);
-                _e('Provided by', 'cftp_admin'); ?> <a href="<?php echo SYSTEM_URI; ?>" target="_blank"><?php echo SYSTEM_NAME; ?></a> <?php if (user_is_logged_in() == true) {
-                    _e('version', 'cftp_admin');
-                    echo ' ' . CURRENT_VERSION;
-                } ?> - <?php _e('Free software', 'cftp_admin');
+                //_e('Provided by', 'cftp_admin'); 
+                ?> 
+                <a href="https://www.marketsoft.com.au/" target="_blank">
+                Marketsoft Services <?php echo $year; ?>		
+                <?php //echo SYSTEM_NAME; ?>
+                </a> 
+                <?php 
+                // if (user_is_logged_in() == true) {
+                //     _e('version', 'cftp_admin');
+                //     echo ' ' . CURRENT_VERSION;
+                // } 
+                ?> 
+                <!-- -  -->
+                <?php //_e('Free software', 'cftp_admin');
             }
             ?>
         </div>
@@ -1472,10 +1488,10 @@ function meta_noindex()
  */
 function meta_favicon()
 {
-    $favicon_location = BASE_URI . 'assets/img/favicon/';
-    echo '<link rel="apple-touch-icon" sizes="180x180" href="' . $favicon_location . 'apple-touch-icon.png">';
-    echo '<link rel="icon" type="image/png" sizes="32x32" href="' . $favicon_location . 'favicon-32x32.png">';
-    echo '<link rel="icon" type="image/png" sizes="16x16" href="' . $favicon_location . 'favicon-16x16.png">';
+    $favicon_location = BASE_URI . 'assets/img/logo/';
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="' . $favicon_location . 'Wattle-Graphic-Reverse-Colour@3x.png">';
+    echo '<link rel="icon" type="image/png" sizes="32x32" href="' . $favicon_location . 'Wattle-Graphic-Reverse-Colour@3x.png">';
+    echo '<link rel="icon" type="image/png" sizes="16x16" href="' . $favicon_location . 'Wattle-Graphic-Reverse-Colour@3x.png">';
     echo '<link rel="manifest" href="' . $favicon_location . 'site.webmanifest">';
     echo '<meta name="theme-color" content="#4c2ab6">';
 }
